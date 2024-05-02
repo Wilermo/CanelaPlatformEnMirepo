@@ -43,16 +43,29 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Nombre</th>
-                                            <th scope="col">Apellido</th>
-                                            <th scope="col">Email</th>
+                                            <th scope="col">Correo</th>
+                                            <th scope="col">Telefono</th>
                                             <th scope="col">Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let market of marketing">
-                                            <td>{{ market.nombre}}</td>
-                                            <td>{{ market.apellido}}</td>
-                                            <td>{{ market.email}}</td>
+                                        <tr *ngFor="let user of usuarios">
+                                            <td>{{ user.name}}</td>
+                                            <td>{{ user.email}}</td>
+                                            <td>{{ user.numberPhone}}</td>
+                                            <td>
+                                                <label for="exampleFormControlSelect1" class="form-label">{{ user.status}}</label>
+                                                <select class="form-select" [(ngModel)]="nuevoStatus" >
+                                                    <option selected disabled>Selecciona una opción</option>
+                                                    <option value="Nuevo">Nuevo</option>
+                                                    <option value="Contactado">Contactado</option>
+                                                    <option value="Plan gratis">Plan gratis</option>
+                                                    <option value="Plan bronce">Plan bronce</option>
+                                                    <option value="Plan silver">Plan silver</option>
+                                                    <option value="Plan gold">Plan gold</option>
+                                                    <option value="Cancelado">Cancelado</option>
+                                                </select >
+                                            </td>
                                         </tr>                                    
                                     </tbody>
                                 </table>

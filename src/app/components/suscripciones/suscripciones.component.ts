@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SuscripcionDto } from 'src/app/model/suscripcion-dto';
-import { SuscripcioService } from 'src/app/service/suscripcio.service';
+import { EmpresaDto } from 'src/app/model/empresa-dto';
+import { EmpresaService } from 'src/app/service/empresa.service';
 
 @Component({
   selector: 'app-suscripciones',
@@ -11,21 +11,21 @@ import { SuscripcioService } from 'src/app/service/suscripcio.service';
 export class SuscripcionesComponent implements OnInit {
   constructor(
     private router: Router,
-    private SuscripcioService: SuscripcioService
+    private SuscripcioService: EmpresaService
   ) {}
 
-  suscripciones: SuscripcionDto[] | undefined;
+  suscripciones: EmpresaDto[] | undefined;
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
   editarSuscripcion(suscripcion: any) {
-    this.router.navigate(['/canela/editar-empresa']);
+    this.router.navigate(['canela/empresa/edit/:id']);
   }
 
   eliminarSuscripcion(suscripcion: any) {}
 
   nuevaEmpresa() {
-    this.router.navigate(['/canela/crear-empresa']);
+    this.router.navigate(['/canela/empresa/add']);
   }
 }

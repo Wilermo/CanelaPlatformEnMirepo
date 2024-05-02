@@ -31,6 +31,9 @@
                         <li class="sidebar-item">
                             <a [routerLink]="['/canela/permisos']" class="sidebar-link">Gestión de usuarios</a>
                         </li>
+                        <li class="sidebar-item">
+                            <a [routerLink]="['/canela/usuarios']" class="sidebar-link">Creación usuario</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
@@ -94,12 +97,13 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-person" style="font-size: 1.5rem; color: #292C32;"></i>
+                <a  class="sidebar-link">
+                    <i [routerLink]="['canela/perfil/view/:id']" class="bi bi-person" style="font-size: 1.5rem; color: #292C32;"></i>
                     <span>Perfil</span>
                 </a>
                 <a href="#" class="sidebar-link">
-                    <i class="bi bi-box-arrow-left" style="font-size: 1.5rem; color: #292C32;"></i>
+                    <i class="bi bi-box-arrow-left" style="font-size: 1.5rem; color: #292C32;" (click)="logout()"
+                        routerLink="/login"></i>
                     <span>Cerrar sesión</span>
                 </a>
             </div>

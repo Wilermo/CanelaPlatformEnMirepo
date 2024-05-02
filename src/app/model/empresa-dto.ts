@@ -1,9 +1,11 @@
 export class EmpresaDto {
   constructor(
-    public nit: string,
-    public nombre: string,
-    public phonecompany: string,
+    public nit: number,
+    public nameCompany: string,
+    public phonecompany: number,
     public maxNumWorker: number,
-    public status: string
+    public address: string,
+    public subscriptionEndDate: Date,
+    public email: string
   ) {}
 }

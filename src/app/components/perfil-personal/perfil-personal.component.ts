@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { PerfilDto } from 'src/app/model/perfil-dto';
 import { PerfilService } from 'src/app/service/perfil.service';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-perfil-personal',
@@ -9,22 +11,23 @@ import { PerfilService } from 'src/app/service/perfil.service';
   styleUrl: './perfil-personal.component.css',
 })
 export class PerfilPersonalComponent implements OnInit {
-  constructor(private router: Router, private PerfilService: PerfilService) {}
-
-  cedula: string | undefined;
-  nombre: string | undefined;
-  correo: string | undefined;
-  direccion: number | undefined;
-  contacto: string | undefined;
-  contraseña: string | undefined;
+  constructor(
+    private router: Router,
+    private PerfilService: PerfilService,
+    private route: ActivatedRoute
+  ) {}
 
   perfil: PerfilDto | undefined;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.route.paramMap
+      .pipe(
+        switchMap((params) => this.PerfilService.findById(+params.get('id')!))
+      )
+      .subscribe((PerfilDto) => (this.perfil = PerfilDto));
   }
 
   editarInformacion() {
-    this.router.navigate(['/canela/plan-editar']);
+    this.router.navigate(['canela/perfil/edit/:id']);
   }
 }

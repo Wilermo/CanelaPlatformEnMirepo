@@ -42,18 +42,24 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Nombre</th>
+                                            <th scope="col">NIT</th>
+                                            <th scope="col">Telefono</th>
                                             <th scope="col">Correo</th>
+                                            <th scope="col">Num trabajadores</th>
+                                            <th scope="col">Dirección</th>
                                             <th scope="col">Fecha final suscripción</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Acciones</th> <
+                                            <th scope="col">Acciones</th> 
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let suscripcion of suscripciones">
-                                            <td>{{ suscripcion.namecompany}}</td>
+                                            <td>{{ suscripcion.nameCompany}}</td>
+                                            <td>{{ suscripcion.nit}}</td>
+                                            <td>{{ suscripcion.phonecompany}}</td>
                                             <td>{{ suscripcion.email}}</td>
-                                            <td>{{ suscripcion.suscripcionenddate}}</td>
-                                            <td>{{ suscripcion.status}}</td>
+                                            <td>{{ suscripcion.maxNumWorker}}</td>
+                                            <td>{{ suscripcion.address}}</td>
+                                            <td>{{ suscripcion.subscriptionEndDate}}</td>
                                             <td>
                                                 <button (click)="editarSuscripcion(suscripcion)">Editar</button>
                                                 <button (click)="eliminarSuscripcion(suscripcion)">Eliminar</button>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creacion de usuarios</title>
 
-
-</head>
 <body>
 
     <div class="container-padre" >
@@ -33,45 +25,53 @@
                     </div>
 
                     <div class="contTitulo" >
-                            
-                        <div class="container-fluid m-3 tabla-creacion" style="width: 1000px; height: 400px; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center;">
-                            <h2>Creación usuario</h2>
-                            <div class="container-informacion">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Nomnbre plan:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerNombre" [(ngModel)]="nombre" name="nombre" required><br>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerApellido" [(ngModel)]="descripcion"
-                                    name="apellido" required><br>
-                                </div>
-                            
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Duración:</label><br>
-                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="duracion"
-                                    name="correo" required placeholder="name@example.com" ><br>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Cantidad empleados:</label><br>
-                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="trabajadores"
-                                    name="correo" required placeholder="name@example.com" ><br>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Bonos:</label><br>
-                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="bonos"
-                                    name="correo" required placeholder="name@example.com" ><br>
-                                </div>
-                            </div>
-
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-plan" type="button" (click)="guardarInformacion()">Crear plan</button>
-                                </div>    
+                        <div class="container-fluid m-3" style="width: 70%; height: 80%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
+                            <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Crear plan</h1>
                         </div>
                     </div>
-                </div>
-            </div>        
 
+                    <div class="contInfo" >
+                            
+                        <div class="container-fluid " style="width: 70%; height: 50%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 15px;display: flex; align-items: center;">
+
+                            <div class="row">
+                                <div class="col-md-6 info1">
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nombre plan: </b> <input type="text" [(ngModel)]="nombre"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Descripción: </b> <input type="text" [(ngModel)]="descripcion"></p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 info2">
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Duración: </b> <input type="number" [(ngModel)]="duracion"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Precio: </b> <input type="number" [(ngModel)]="precio"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Trabajadores: </b> <input type="number" [(ngModel)]="trabajadores"></p>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                           
+                    
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex  botones">
+                                    <button class="btn btn-plan" type="button" (click)="guardarInformacion()">Crear plan</button>
+                                    <button class="btn btn-plan" type="button" (click)="volver()" >Volver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+      
+            </div>
     </div>
 </body>
-</html>

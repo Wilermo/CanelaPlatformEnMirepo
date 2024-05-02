@@ -28,25 +28,13 @@ export class GestionPlanesComponent implements OnInit {
     );
   }
 
-  login() {
-    this.router.navigate(['/']);
-  }
-
-  pantallaUsuarios() {
-    this.router.navigate(['/canela/usuarios']);
-  }
-
-  pantallaPermisos() {
-    this.router.navigate(['/canela/permisos']);
-  }
-
   editarPlan(Plan: any) {
-    this.router.navigate(['/canela/plan-editar']);
+    this.router.navigate(['canela/plan/edit/:id']);
   }
 
   eliminarPlan(suscripcion: any) {}
 
   nuevoPlan() {
-    this.router.navigate(['/canela/plan-crear']);
+    this.router.navigate(['canela/plan/add']);
   }
 }

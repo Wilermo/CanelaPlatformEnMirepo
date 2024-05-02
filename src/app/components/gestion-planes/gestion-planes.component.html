@@ -38,20 +38,18 @@
                                             <th scope="col">Nombre plan</th>
                                             <th scope="col">Descripción</th>
                                             <th scope="col">Duración</th>
+                                            <th scope="col">Precio</th>
                                             <th scope="col">Cantidad empleados</th>
-                                            <th scope="col">Bonos</th>
-                                            <th scope="col">Status</th>
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let plan of planes">
-                                            <td>{{ plan.namePlan}}</td>
+                                            <td>{{ plan.name}}</td>
                                             <td>{{ plan.description}}</td>
                                             <td>{{ plan.duration}}</td>
+                                            <td>{{ plan.price}}</td>
                                             <td>{{ plan.maxNumWorker}}</td>
-                                            <td>{{ plan.bonuses}}</td>
-                                            <td>{{ plan.status}}</td>
                                             <td>
                                                 <button (click)="editarPlan(plan)">Editar</button>
                                                 <button (click)="eliminarPlan(plan)">Eliminar</button>

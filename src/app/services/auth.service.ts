@@ -12,9 +12,9 @@ import { encrypt } from '../utils/encrypt';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   login(username: string, password: string): Observable<TokenResponse> {
-    password = encrypt(password);
+    password;
     console.log(password);
     const authReq: AuthenticationRequest = {
       username: username,
@@ -36,13 +36,13 @@ export class AuthService {
       `${environment.authURL}/${username}/forgot-password`,
       null
     );
-}
+  }
   createUser(
     email: string,
     firstName: string,
     lastName: string,
     username: string,
-    role:string
+    role: string
   ): Observable<any> {
     const user: User = {
       id: null,
@@ -51,7 +51,7 @@ export class AuthService {
       email: email,
       username: username,
       password: '12345',
-      role: role
+      role: role,
     };
     return this.http.post<any>(`${environment.authURL}/${role}`, user);
   }

@@ -16,11 +16,11 @@ export class PlanCrearComponent implements OnInit {
 
   nombre: string | undefined;
   descripcion: string | undefined;
-  duracion: string | undefined;
+  duracion: number | undefined;
   trabajadores: number | undefined;
-  bonos: number | undefined;
+  precio: number | undefined;
 
-  plan: PlanesDto | undefined;
+  Plan: PlanesDto | undefined;
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
@@ -31,24 +31,29 @@ export class PlanCrearComponent implements OnInit {
     let description = this.nombre;
     let duration = this.duracion;
     let maxNumWorker = this.trabajadores;
-    let bonuses = this.bonos;
+    let price = this.precio;
     if (
       name != undefined &&
       name != ' ' &&
       description != undefined &&
       description != ' ' &&
       duration != undefined &&
-      duration != ' ' &&
       maxNumWorker != undefined &&
-      bonuses != undefined
+      price != undefined
     ) {
       let planNuevo = new PlanesDto(
         name,
         description,
         duration,
         maxNumWorker,
-        bonuses
+        price
       );
+      this.InfoPlanesService.guardaPlan(planNuevo).subscribe((result) => {
+        this.router.navigate(['canela/planes']);
+      });
     }
+  }
+  volver() {
+    this.router.navigate(['canela/planes']);
   }
 }

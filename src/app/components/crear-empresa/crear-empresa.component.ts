@@ -10,11 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CrearEmpresaComponent {
   constructor(private EmpresaService: EmpresaService, private router: Router) {}
-  nit: string | undefined;
+  nit: number | undefined;
   nombre: string | undefined;
-  phone: string | undefined;
+  phone: number | undefined;
   maxNumWorker: number | undefined;
-  status: string | undefined;
+  direccion: string | undefined;
+  fechaFinal: Date | undefined;
+  correo: string | undefined;
 
   nuevaEmpresa: EmpresaDto | undefined;
 
@@ -25,25 +27,36 @@ export class CrearEmpresaComponent {
     let nombre = this.nombre;
     let phone = this.phone;
     let maxNumWorker = this.maxNumWorker;
-    let status = this.status;
+    let direccion = this.direccion;
+    let fechaFinal = this.fechaFinal;
+    let correo = this.correo;
     if (
       nombre != undefined &&
       nombre != ' ' &&
       NIT != undefined &&
-      NIT != ' ' &&
       phone != undefined &&
-      phone != ' ' &&
       maxNumWorker != undefined &&
-      status != undefined &&
-      status != ' '
+      direccion != undefined &&
+      direccion != ' ' &&
+      fechaFinal != undefined &&
+      correo != undefined &&
+      correo != ' '
     ) {
       let empresaNueva = new EmpresaDto(
         NIT,
         nombre,
         phone,
         maxNumWorker,
-        status
+        direccion,
+        fechaFinal,
+        correo
       );
+      this.EmpresaService.guardarEmpresa(empresaNueva).subscribe((result) => {
+        this.router.navigate(['/canela/suscripciones']);
+      });
     }
+  }
+  volver() {
+    this.router.navigate(['/canela/suscripciones']);
   }
 }
