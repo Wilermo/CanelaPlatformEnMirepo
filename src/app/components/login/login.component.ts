@@ -53,9 +53,9 @@ export class LoginComponent {
           console.log("Respuesta del servidor:", data); 
           const rol = localStorage.getItem('role');
           if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
-            this.router.navigate(['/reset-password']);
+            this.router.navigate(['/canela/usuarios']);
           }  else if (rol !== 'ADMIN_CANELA, default-roles-talentsoft') {
-            this.router.navigate(['/modules']);
+            this.router.navigate(['/canela/planes']);
           }
         },
         (error: any) => {
@@ -77,9 +77,5 @@ export class LoginComponent {
         }
       );
     }
-  }
-
-  login() {
-    this.router.navigate(['/canela/permisos']);
   }
 }

@@ -1,12 +1,4 @@
-.menu-container {
-  background-color: #f8f9fa; /* Color de fondo del menú */
-  border-right: 1px solid #dee2e6; /* Borde derecho */
-  padding-top: 20px; /* Espaciado superior */
-}
 
-.nav-link {
-  padding: 10px; /* Espaciado de los elementos del menú */
-}
 
 
 .nav{
@@ -21,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
 
 
 }
@@ -55,7 +47,7 @@
   background-size: cover; 
   background-position: center;
   height: 100%; 
-  width: 85%;   
+  width: 100%;   
 
   background-color: #f8f9fa; /* Color de fondo del menú */
 

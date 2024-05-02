@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="bi bi-list" style="font-size: 2rem; color: #292C32;"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Canela</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#admin" aria-expanded="false" aria-controls="admin">
+                        <i class="bi bi-columns-gap" style="font-size: 1.5rem; color: #292C32;"></i>
+                        <span>Administrador</span>
+                    </a>
+                    <ul id="admin" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a [routerLink]="['/canela/permisos']" class="sidebar-link">Gestión de usuarios</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#hire" aria-expanded="false" aria-controls="hire">
+                        <i class="bi bi-clipboard2-heart" style="font-size: 1.5rem; color: #292C32;"></i>
+                        <span>Soporte</span>
+                    </a>
+                    <ul id="hire" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Logs</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Mesa de ayuda</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Impersonar</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#fire" aria-expanded="false" aria-controls="fire">
+                        <i class="bi bi-clipboard2-x" style="font-size: 1.5rem; color: #292C32;"></i>
+                        <span>Marketing</span>
+                    </a>
+                    <ul id="fire" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a [routerLink]="['/canela/marketing']" class="sidebar-link">Listado empresas</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#nomi" aria-expanded="false" aria-controls="nomi">
+                        <i class="bi bi-person-vcard" style="font-size: 1.5rem; color: #292C32;"></i>
+                        <span>Cuentas</span>
+                    </a>
+                    <ul id="nomi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Servicios</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a [routerLink]="['/canela/planes']" class="sidebar-link">Planes</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Cupones</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a [routerLink]="['/canela/suscripciones']" class="sidebar-link">Suscripciones</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item-automa" *ngFor="let modulo of modulos">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi bi-gear" style="font-size: 1.5rem; color: #292C32;"></i>
+                        <span>{{ modulo.nombre }}</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-person" style="font-size: 1.5rem; color: #292C32;"></i>
+                    <span>Perfil</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="bi bi-box-arrow-left" style="font-size: 1.5rem; color: #292C32;"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main">
+            <div class="navbar">
+            </div>
+            <div class="contenido p-3">
+                <h1>
+                    <router-outlet></router-outlet>
+                </h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

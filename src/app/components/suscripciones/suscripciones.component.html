@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil y Menú Vertical</title>
 
+
+</head>
 <body>
 
     <div class="container-padre" >
@@ -26,7 +32,7 @@
 
                         <div class="contTitulo" >
                             <div class="container-fluid m-3" style="width: 1000px; height: 145px; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
-                                <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Gestión planes</h1>
+                                <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Gestión suscripciones</h1>
                             </div>
                         </div>
           
@@ -35,33 +41,29 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Nombre plan</th>
-                                            <th scope="col">Descripción</th>
-                                            <th scope="col">Duración</th>
-                                            <th scope="col">Cantidad empleados</th>
-                                            <th scope="col">Bonos</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Correo</th>
+                                            <th scope="col">Fecha final suscripción</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Acciones</th>
+                                            <th scope="col">Acciones</th> <
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let plan of planes">
-                                            <td>{{ plan.namePlan}}</td>
-                                            <td>{{ plan.description}}</td>
-                                            <td>{{ plan.duration}}</td>
-                                            <td>{{ plan.maxNumWorker}}</td>
-                                            <td>{{ plan.bonuses}}</td>
-                                            <td>{{ plan.status}}</td>
+                                        <tr *ngFor="let suscripcion of suscripciones">
+                                            <td>{{ suscripcion.namecompany}}</td>
+                                            <td>{{ suscripcion.email}}</td>
+                                            <td>{{ suscripcion.suscripcionenddate}}</td>
+                                            <td>{{ suscripcion.status}}</td>
                                             <td>
-                                                <button (click)="editarPlan(plan)">Editar</button>
-                                                <button (click)="eliminarPlan(plan)">Eliminar</button>
+                                                <button (click)="editarSuscripcion(suscripcion)">Editar</button>
+                                                <button (click)="eliminarSuscripcion(suscripcion)">Eliminar</button>
                                             </td>
                                         </tr>                                    
                                     </tbody>
                                 </table>
                             </div>
                             <div class="button-container">
-                                <button class="btn btn-plan" type="button"(click)="nuevoPlan()">Nuevo plan</button>
+                                <button class="btn btn-plan" type="button" (click)="nuevaEmpresa()">Nueva empresa</button>
                             </div>
                         </div>
 

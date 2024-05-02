@@ -38,34 +38,30 @@
                             <h2>Creación usuario</h2>
                             <div class="container-informacion">
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Primer nombre:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerNombre" [(ngModel)]="nuevoUsuarioAuth.firstName" name="nombre" required><br>
+                                    <label for="exampleFormControlTextarea1" class="form-label">NIT:</label><br>
+                                    <input type="email" class="form-control" id="entradaNIT" [(ngModel)]="nit" name="nit" required><br>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Primer apellido:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerApellido" [(ngModel)]="nuevoUsuarioAuth.lastName"
+                                    <label for="exampleFormControlTextarea1" class="form-label">Nomnbre empresa:</label><br>
+                                    <input type="email" class="form-control" id="entradaprimerApellido" [(ngModel)]="nombre"
                                     name="apellido" required><br>
                                 </div>
                             
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Correo:</label><br>
-                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="nuevoUsuarioAuth.email"
+                                    <label for="exampleFormControlTextarea1" class="form-label">Telefono:</label><br>
+                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="phone"
                                     name="correo" required placeholder="name@example.com" ><br>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlSelect1" class="form-label">Selecciona una opción:</label>
-                                    <select class="form-select" id="entradarol" [(ngModel)]="nuevoUsuarioAuth.role" name="rol">
-                                        <option selected disabled>Selecciona una opción</option>
-                                        <option value="MARKETING">Marketing</option>
-                                        <option value="SOPORTE">Soporte</option>
-                                        <option value="CUENTAS">Cuentas</option>
-                                        <option value="ADMIN">Admin</option>
-                                    </select>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Status:</label><br>
+                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="status"
+                                    name="correo" required placeholder="name@example.com" ><br>
                                 </div>
+
                             </div>
 
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-plan" type="button" (click)="enviarDatos()">Crear Usuario</button>
+                                    <button class="btn btn-plan" type="button" (click)="crearEmpresa()">Crear empresa</button>
                                 </div>    
                         </div>
                     </div>

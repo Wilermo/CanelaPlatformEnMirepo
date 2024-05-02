@@ -39,4 +39,14 @@ export class GestionPlanesComponent implements OnInit {
   pantallaPermisos() {
     this.router.navigate(['/canela/permisos']);
   }
+
+  editarPlan(Plan: any) {
+    this.router.navigate(['/canela/plan-editar']);
+  }
+
+  eliminarPlan(suscripcion: any) {}
+
+  nuevoPlan() {
+    this.router.navigate(['/canela/plan-crear']);
+  }
 }

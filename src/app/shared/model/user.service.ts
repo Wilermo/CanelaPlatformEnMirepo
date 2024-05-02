@@ -17,7 +17,7 @@ export class UserService {
     // Crear los headers necesarios para la autorización
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     });
 
     return this.http.post<User>(url, user, { headers });

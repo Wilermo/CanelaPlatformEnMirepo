@@ -38,34 +38,34 @@
                             <h2>Creación usuario</h2>
                             <div class="container-informacion">
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Primer nombre:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerNombre" [(ngModel)]="nuevoUsuarioAuth.firstName" name="nombre" required><br>
+                                    <label for="exampleFormControlInput1" class="form-label">Nomnbre plan:</label><br>
+                                    <input type="email" class="form-control" id="entradaprimerNombre" [(ngModel)]="nombre" name="nombre" required><br>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Primer apellido:</label><br>
-                                    <input type="email" class="form-control" id="entradaprimerApellido" [(ngModel)]="nuevoUsuarioAuth.lastName"
+                                    <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label><br>
+                                    <input type="email" class="form-control" id="entradaprimerApellido" [(ngModel)]="descripcion"
                                     name="apellido" required><br>
                                 </div>
                             
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Correo:</label><br>
-                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="nuevoUsuarioAuth.email"
+                                    <label for="exampleFormControlTextarea1" class="form-label">Duración:</label><br>
+                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="duracion"
                                     name="correo" required placeholder="name@example.com" ><br>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlSelect1" class="form-label">Selecciona una opción:</label>
-                                    <select class="form-select" id="entradarol" [(ngModel)]="nuevoUsuarioAuth.role" name="rol">
-                                        <option selected disabled>Selecciona una opción</option>
-                                        <option value="MARKETING">Marketing</option>
-                                        <option value="SOPORTE">Soporte</option>
-                                        <option value="CUENTAS">Cuentas</option>
-                                        <option value="ADMIN">Admin</option>
-                                    </select>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Cantidad empleados:</label><br>
+                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="trabajadores"
+                                    name="correo" required placeholder="name@example.com" ><br>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Bonos:</label><br>
+                                    <input type="email" class="form-control" id="entradacorreo"[(ngModel)]="bonos"
+                                    name="correo" required placeholder="name@example.com" ><br>
                                 </div>
                             </div>
 
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-plan" type="button" (click)="enviarDatos()">Crear Usuario</button>
+                                    <button class="btn btn-plan" type="button" (click)="guardarInformacion()">Crear plan</button>
                                 </div>    
                         </div>
                     </div>
