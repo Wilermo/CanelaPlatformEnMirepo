@@ -32,7 +32,7 @@ const routes: Routes = [
       { path: 'canela/perfil/edit/:id', component: PerfilEditarComponent },
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
       { path: 'canela/marketing', component: MarketingComponent },
-      { path: 'canela/plan/edit/:4', component: PlanEditarComponent },
+      { path: 'canela/plan/edit/4', component: PlanEditarComponent },
       { path: 'canela/plan/add', component: PlanCrearComponent },
       { path: 'canela/empresa/add', component: CrearEmpresaComponent },
       { path: 'canela/empresa/edit/:id', component: EditarEmpresaComponent },

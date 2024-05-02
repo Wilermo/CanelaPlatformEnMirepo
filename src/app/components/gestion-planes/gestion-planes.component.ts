@@ -29,7 +29,7 @@ export class GestionPlanesComponent implements OnInit {
   }
 
   editarPlan(Plan: any) {
-    this.router.navigate(['/canela/plan/edit/:4']);
+    this.router.navigate(['/canela/plan/edit/4']);
   }
 
   eliminarPlan(suscripcion: any) {}
