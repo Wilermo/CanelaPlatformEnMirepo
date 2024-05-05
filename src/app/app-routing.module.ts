@@ -17,7 +17,8 @@ import { EditarEmpresaComponent } from './components/editar-empresa/editar-empre
 import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'forgot', component: ForgotPasswordComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
 
@@ -36,9 +37,6 @@ const routes: Routes = [
       { path: 'canela/plan/add', component: PlanCrearComponent },
       { path: 'canela/empresa/add', component: CrearEmpresaComponent },
       { path: 'canela/empresa/edit/:id', component: EditarEmpresaComponent },
-
-      // Ruta hija
-      // Puedes añadir más rutas hijas que requieran Navbar aquí
     ],
   },
 
