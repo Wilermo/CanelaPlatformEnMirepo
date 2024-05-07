@@ -1,5 +1,6 @@
 export class PlanesDto {
   constructor(
+    public id: number,
     public name: string | undefined,
     public description: string | undefined,
     public duration: number | undefined,

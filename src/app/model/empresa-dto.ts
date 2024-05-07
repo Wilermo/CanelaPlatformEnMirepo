@@ -1,5 +1,6 @@
 export class EmpresaDto {
   constructor(
+    public id: number,
     public nit: number,
     public nameCompany: string,
     public phonecompany: number,

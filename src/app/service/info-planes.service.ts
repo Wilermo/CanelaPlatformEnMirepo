@@ -35,11 +35,11 @@ export class InfoPlanesService {
   }
 
   findById(id: number) {
-    return this.http.get<PlanesDto>(`http://localhost:8080//plans/{id}`);
+    return this.http.get<PlanesDto>(`http://localhost:8080/plans/{id}`);
   }
 
   findAll(): Observable<PlanesDto[]> {
-    return this.http.get<PlanesDto[]>(`http://localhost:8080//plans`);
+    return this.http.get<PlanesDto[]>(`http://localhost:8080/plans`);
   }
 
   getPlanes(): Observable<PlanesDto[]> {
