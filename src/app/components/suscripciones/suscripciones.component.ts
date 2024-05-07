@@ -16,7 +16,15 @@ export class SuscripcionesComponent implements OnInit {
 
   suscripciones: EmpresaDto[] | undefined;
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.SuscripcioService.getEmpresas().subscribe(
+      (data) => {
+        console.log(data);
+        this.suscripciones = data;
+      },
+      (error) => {
+        console.error('Ocurrió un error al obtener los planes:', error);
+      }
+    );
   }
 
   editarSuscripcion(suscripcion: any) {

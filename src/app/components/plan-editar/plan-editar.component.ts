@@ -31,6 +31,7 @@ export class PlanEditarComponent implements OnInit {
         switchMap((params) => this.PlanService.findById(+params.get('id')!))
       )
       .subscribe((PlanesDto) => (this.plan = PlanesDto));
+    console.log(this.plan);
   }
   editar() {
     let inputNombre = this.entradaNombre;
@@ -53,6 +54,7 @@ export class PlanEditarComponent implements OnInit {
         this.plan.maxNumWorker = inputTrabaj;
         this.plan.duration = inputDurac;
         this.plan.price = inputPrecio;
+        console.log(this.plan);
 
         this.PlanService.modificarPlan(this.plan).subscribe((result) => {
           this.router.navigate(['/canela/planes']);

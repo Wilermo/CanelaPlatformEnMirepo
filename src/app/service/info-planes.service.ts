@@ -7,7 +7,7 @@ import { PlanesDto } from '../model/planes-dto';
   providedIn: 'root',
 })
 export class InfoPlanesService {
-  private apiUrl = 'http://localhost:8080/api/planes';
+  private apiUrl = 'http://localhost:8080/plans';
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -35,11 +35,11 @@ export class InfoPlanesService {
   }
 
   findById(id: number) {
-    return this.http.get<PlanesDto>(`http://localhost:8080//plans/{id}`);
+    return this.http.get<PlanesDto>(`http://localhost:8080/plans/{id}`);
   }
 
   findAll(): Observable<PlanesDto[]> {
-    return this.http.get<PlanesDto[]>(`http://localhost:8080//plans`);
+    return this.http.get<PlanesDto[]>(`http://localhost:8080/plans`);
   }
 
   getPlanes(): Observable<PlanesDto[]> {

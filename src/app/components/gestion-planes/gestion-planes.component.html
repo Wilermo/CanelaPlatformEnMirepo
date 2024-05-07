@@ -39,7 +39,6 @@
                                             <th scope="col">Descripción</th>
                                             <th scope="col">Duración</th>
                                             <th scope="col">Precio</th>
-                                            <th scope="col">Cantidad empleados</th>
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
@@ -49,7 +48,6 @@
                                             <td>{{ plan.description}}</td>
                                             <td>{{ plan.duration}}</td>
                                             <td>{{ plan.price}}</td>
-                                            <td>{{ plan.maxNumWorker}}</td>
                                             <td>
                                                 <button (click)="editarPlan(plan)">Editar</button>
                                                 <button (click)="eliminarPlan(plan)">Eliminar</button>

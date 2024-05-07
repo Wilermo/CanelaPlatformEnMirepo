@@ -16,12 +16,12 @@ export class UsuariosComponent {
     private registroUsuarioService: RegistroUsuarioService,
     private router: Router,
     private userService: UserService
-  ) { }
+  ) {}
 
   nuevoUsuario: UsuarioRegistroDto | undefined;
   nuevoUsuarioAuth: User = new User();
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   pantallaPlanes() {
     this.router.navigate(['/canela/planes']);
@@ -76,16 +76,18 @@ export class UsuariosComponent {
     const token = localStorage.getItem('token');
     if (token) {
       console.log('Datos que se envían:', this.nuevoUsuarioAuth);
-      this.userService.createUser(this.nuevoUsuarioAuth, this.nuevoUsuarioAuth.role, token).subscribe({
-        next: (data) => {
-          console.log('Respuesta recibida:', data);
-          this.router.navigate(['/canela/permisos']);
-        },
-        error: (err) => {
-          console.error('Error al enviar datos:', err);
-        }
-      });
 
+      this.userService
+        .createUser(this.nuevoUsuarioAuth, this.nuevoUsuarioAuth.role, token)
+        .subscribe({
+          next: (data) => {
+            console.log('Respuesta recibida:', data);
+            this.router.navigate(['/canela/permisos']);
+          },
+          error: (err) => {
+            console.error('Error al enviar datos:', err);
+          },
+        });
     } else {
       console.error('No se encontró el token de autenticación');
     }
