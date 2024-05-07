@@ -1,0 +1,85 @@
+
+<body>
+
+    <div class="container-padre" >
+  
+            <div class="col2">
+                <div class = "contenido">  
+                    <div class="simple_container">
+                        
+                        <!-- Contenedor del otro contenido -->
+                        <div class="container cont1">
+                            <div style="display: flex; align-items: center; height: 48px;">
+                                <i class="fa-solid fa-magnifying-glass" style="margin-right: 10px;"></i>
+                                <span style="color: rgb(195, 195, 197);">Ingresa tu búsqueda aquí...</span>
+                            </div>
+                        </div>
+
+                        <div class="container cont2">
+                            <div style="display: flex; align-items: center; height: 110px;">
+                                <div style="margin-left: auto; margin-right: 20px;">
+                                    <i class="fa-solid fa-bell" style="color: #963e6c; font-size: 2em;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contTitulo" >
+                        <div class="container-fluid m-3" style="width: 70%; height: 80%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
+                            <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Editar perfil</h1>
+                        </div>
+                    </div>
+
+                    <div class="contInfo" >
+                            
+                        <div class="container-fluid " style="width: 70%; height: 50%; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 15px;display: flex; align-items: center;">
+
+                            <div class="row">
+                                <div class="col-md-6 info1">
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nuevo nombre: </b> <input type="text" [(ngModel)]="entradanNombre"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Usuario: </b> {{perfil?.username}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Correo: </b> {{perfil?.email}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nueva cédula: </b> <input type="number" [(ngModel)]="entradaCedula"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 info2">
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nueva dirección: </b> <input type="text"   [(ngModel)]="entradaDireccion"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nuevo teléfono: </b> <input type="number"   [(ngModel)]="entradaTelefono"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nuevo nombre: </b> <input type="text"   [(ngModel)]="entradaNombreContacto"></p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p><b class="subtitulo">Nuevo teléfono: </b> <input type="number"   [(ngModel)]="entradanTelContacto"></p>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                           
+                    
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex  botones">
+                                    <button class="btn btn-plan" type="button" (click)="editar()">Guardar cambios</button>
+                                    <button class="btn btn-plan" type="button" (click)="volver()" >Volver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+      
+            </div>
+    </div>
+</body>

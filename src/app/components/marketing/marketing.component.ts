@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MarketingDto } from 'src/app/model/marketing-dto';
-import { MarketingService } from 'src/app/service/marketing.service';
+import { PerfilDto } from 'src/app/model/perfil-dto';
+import { PerfilService } from 'src/app/service/perfil.service';
 
 @Component({
   selector: 'app-marketing',
@@ -12,10 +12,15 @@ import { MarketingService } from 'src/app/service/marketing.service';
 export class MarketingComponent implements OnInit {
   constructor(
     private router: Router,
-    private MarketingService: MarketingService
+    private MarketingService: PerfilService
   ) {}
 
-  marketing: MarketingDto[] | undefined;
+  usuarios: PerfilDto[] | undefined;
+  nuevoStatus: string | undefined;
 
   ngOnInit(): void {}
+
+  onChange(value: string) {
+    this.nuevoStatus = value;
+  }
 }

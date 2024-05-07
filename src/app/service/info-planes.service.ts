@@ -7,7 +7,7 @@ import { PlanesDto } from '../model/planes-dto';
   providedIn: 'root',
 })
 export class InfoPlanesService {
-  private apiUrl = 'http://localhost:8080/api/planes';
+  private apiUrl = 'http://localhost:8080/plans';
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -17,7 +17,7 @@ export class InfoPlanesService {
 
   constructor(private http: HttpClient) {}
 
-  guardarUsuario(nuevoPlan: PlanesDto): Observable<PlanesDto> {
+  guardaPlan(nuevoPlan: PlanesDto): Observable<PlanesDto> {
     console.log(nuevoPlan);
     return this.http.post<PlanesDto>(
       `${this.apiUrl}/add`,
@@ -26,8 +26,20 @@ export class InfoPlanesService {
     );
   }
 
+  modificarPlan(plan: PlanesDto): Observable<PlanesDto> {
+    return this.http.put<PlanesDto>(
+      `http://localhost:8080/plans/{id}`,
+      plan,
+      this.httpOptions
+    );
+  }
+
+  findById(id: number) {
+    return this.http.get<PlanesDto>(`http://localhost:8080/plans/{id}`);
+  }
+
   findAll(): Observable<PlanesDto[]> {
-    return this.http.get<PlanesDto[]>(`${this.apiUrl}`);
+    return this.http.get<PlanesDto[]>(`http://localhost:8080/plans`);
   }
 
   getPlanes(): Observable<PlanesDto[]> {

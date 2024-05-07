@@ -39,7 +39,7 @@
 .container-padre{
   width: 100%; /* Asegura que el contenedor sea de ancho completo */
   /* Elimina el padding interno */
-  height: 100vh;
+  height: 100%;
   margin: auto; 
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@
   background-size: cover; 
   background-position: center;
   height: 100%; 
-  width: 85%;   
+  width: 100%;   
 
   background-color: #f8f9fa; /* Color de fondo del menú */
 
@@ -123,7 +123,7 @@
   /*width: 1191.005px; 
   height: 210px;*/ 
   width: 100%;
-  height: 85%;
+  height: 25%;
   border: 1px solid #ccc; 
   background-color: #52223b; 
   display: flex; 

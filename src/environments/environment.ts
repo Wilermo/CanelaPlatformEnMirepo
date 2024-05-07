@@ -1,6 +1,5 @@
 export const environment = {
-    production: false,
-    authURL: "https://canelaauth-production.up.railway.app/api/talentsoft/auth",
-    secretKey: 'ThisIsASecretKey'
-  };
-  
+  production: false,
+  authURL: 'https://canelaapigatewayback-qa.up.railway.app/api/talentsoft/auth',
+  secretKey: 'ThisIsASecretKey',
+};

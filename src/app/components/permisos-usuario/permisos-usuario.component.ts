@@ -33,4 +33,8 @@ export class PermisosUsuarioComponent implements OnInit {
   planes() {
     this.router.navigate(['/canela/planes']);
   }
+
+  nuevoUsuario() {
+    this.router.navigate(['canela/usuarios']);
+  }
 }

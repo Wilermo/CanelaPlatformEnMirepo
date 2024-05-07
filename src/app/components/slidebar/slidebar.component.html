@@ -94,12 +94,13 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="bi bi-person" style="font-size: 1.5rem; color: #292C32;"></i>
+                <a  class="sidebar-link">
+                    <i [routerLink]="['canela/perfil/view/:id']" class="bi bi-person" style="font-size: 1.5rem; color: #292C32;"></i>
                     <span>Perfil</span>
                 </a>
                 <a href="#" class="sidebar-link">
-                    <i class="bi bi-box-arrow-left" style="font-size: 1.5rem; color: #292C32;"></i>
+                    <i class="bi bi-box-arrow-left" style="font-size: 1.5rem; color: #292C32;" (click)="logout()"
+                        routerLink="/login"></i>
                     <span>Cerrar sesión</span>
                 </a>
             </div>

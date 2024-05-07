@@ -291,4 +291,15 @@ input:checked + .slider:before {
   margin-right: 10px; /* Ajusta el margen según tus necesidades */
 }
 
+.button-container{
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+.btn-plan{
+    background-color: #963e6c;
+    color: #ffffff; 
+    width: 100%;
+}
 

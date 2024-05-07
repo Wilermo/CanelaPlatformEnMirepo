@@ -1,12 +1,10 @@
-import { EmailValidator } from '@angular/forms';
-
 export class PlanesDto {
   constructor(
-    public namePlan: string | undefined,
+    public id: number,
+    public name: string | undefined,
     public description: string | undefined,
-    public duration: string | undefined,
+    public duration: number | undefined,
     public maxNumWorker: number | undefined,
-    public bonuses: number | undefined,
-    public status: boolean | undefined
+    public price: number | undefined
   ) {}
 }
