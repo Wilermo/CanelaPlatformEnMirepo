@@ -1,5 +1,6 @@
-export class EmpresaDto {
+export class EmpresaEditar {
   constructor(
+    public id: number,
     public nit: number,
     public nameCompany: string,
     public phoneCompany: number,

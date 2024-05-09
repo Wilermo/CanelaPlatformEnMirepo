@@ -15,6 +15,9 @@ import { PlanEditarComponent } from './components/plan-editar/plan-editar.compon
 import { CrearEmpresaComponent } from './components/crear-empresa/crear-empresa.component';
 import { EditarEmpresaComponent } from './components/editar-empresa/editar-empresa.component';
 import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.component';
+import { LogsComponent } from './components/logs/logs.component';
+import { MesaAyudaComponent } from './components/mesa-ayuda/mesa-ayuda.component';
+import { ImpersonarComponent } from './components/impersonar/impersonar.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -36,6 +39,9 @@ const routes: Routes = [
       { path: 'canela/plan/add', component: PlanCrearComponent },
       { path: 'canela/empresa/add', component: CrearEmpresaComponent },
       { path: 'canela/empresa/edit/:id', component: EditarEmpresaComponent },
+      { path: 'canela/logs', component: LogsComponent },
+      { path: 'canela/mesa-ayuda', component: MesaAyudaComponent },
+      { path: 'canela/impersonar', component: ImpersonarComponent },
 
       // Ruta hija
       // Puedes añadir más rutas hijas que requieran Navbar aquí

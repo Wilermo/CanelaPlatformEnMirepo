@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { EmpresaDto } from 'src/app/model/empresa-dto';
-import { EmpresaService } from 'src/app/service/empresa.service';
+import { EmpresaEditar } from 'src/app/model/empresa-editar';
+import { EmpresaService } from 'src/app/service/empresa-editar.service';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -17,7 +17,8 @@ export class EditarEmpresaComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  empresa: EmpresaDto | undefined;
+  entradaid: number | undefined;
+  empresa: EmpresaEditar | undefined;
   entradaNombre: string | undefined;
   entradanNIT: number | undefined;
   entradaCorreo: string | undefined;
@@ -31,10 +32,11 @@ export class EditarEmpresaComponent implements OnInit {
       .pipe(
         switchMap((params) => this.EmpresaService.findById(+params.get('id')!))
       )
-      .subscribe((EmpresaDto) => (this.empresa = EmpresaDto));
+      .subscribe((EmpresaEditar) => (this.empresa = EmpresaEditar));
   }
 
   editar() {
+    let id = this.entradaid;
     let nombre = this.entradaNombre;
     let NIT = this.entradanNIT;
     let correo = this.entradaCorreo;
@@ -44,6 +46,7 @@ export class EditarEmpresaComponent implements OnInit {
     let fechaFinal = this.entradaFechaTerminacion;
 
     if (
+      id != undefined &&
       NIT != undefined &&
       nombre != undefined &&
       nombre != '' &&
@@ -56,10 +59,11 @@ export class EditarEmpresaComponent implements OnInit {
       fechaFinal != undefined
     ) {
       if (this.empresa != undefined) {
+        this.empresa.id = id;
         this.empresa.nit = NIT;
         this.empresa.nameCompany = nombre;
-        this.empresa.phonecompany = phone;
-        this.empresa.maxNumWorker = maxNumWorker;
+        this.empresa.phoneCompany = phone;
+        this.empresa.numWorkers = maxNumWorker;
         this.empresa.address = direccion;
         this.empresa.subscriptionEndDate = fechaFinal;
         this.empresa.email = correo;

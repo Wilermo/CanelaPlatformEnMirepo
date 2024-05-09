@@ -14,6 +14,7 @@ export class PlanCrearComponent implements OnInit {
     private InfoPlanesService: InfoPlanesService
   ) {}
 
+  idPlan: number | undefined;
   nombre: string | undefined;
   descripcion: string | undefined;
   duracion: number | undefined;

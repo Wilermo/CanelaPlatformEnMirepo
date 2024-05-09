@@ -19,6 +19,7 @@ export class PerfilEditarComponent implements OnInit {
   ) {}
 
   perfil: PerfilDto | undefined;
+  entradaId: number | undefined;
   entradaCedula: number | undefined;
   entradanNombre: string | undefined;
   entradaDireccion: string | undefined;
@@ -35,6 +36,7 @@ export class PerfilEditarComponent implements OnInit {
   }
 
   editar() {
+    let inputId = this.entradaId;
     let inputIdentification = this.entradaCedula;
     let inputName = this.entradanNombre;
     let inputAdress = this.entradaDireccion;
@@ -43,6 +45,7 @@ export class PerfilEditarComponent implements OnInit {
     let inputEmergencyContact = this.entradanTelContacto;
 
     if (
+      inputId != undefined &&
       inputIdentification != undefined &&
       inputName != undefined &&
       inputName != '' &&
@@ -54,6 +57,7 @@ export class PerfilEditarComponent implements OnInit {
       inputEmergencyContact != undefined
     ) {
       if (this.perfil != undefined) {
+        this.perfil.id = inputId;
         this.perfil.identificacion = inputIdentification;
         this.perfil.name = inputName;
         this.perfil.address = inputAdress;
