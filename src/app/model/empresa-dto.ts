@@ -6,6 +6,7 @@ export class EmpresaDto {
     public numWorkers: number,
     public address: string,
     public subscriptionEndDate: Date,
-    public email: string
+    public email: string,
+    public status: string
   ) {}
 }
