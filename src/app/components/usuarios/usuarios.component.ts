@@ -92,4 +92,8 @@ export class UsuariosComponent {
       console.error('No se encontró el token de autenticación');
     }
   }
+
+  volver() {
+    this.router.navigate(['canela/permisos']);
+  }
 }

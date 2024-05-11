@@ -3,7 +3,7 @@ export class SuscripcionDto {
     public id: number,
     public namecompany: string,
     public email: string,
-    public suscripcionenddate: Date,
+    public suscripcionEndDate: Date,
     public status: string
   ) {}
 }

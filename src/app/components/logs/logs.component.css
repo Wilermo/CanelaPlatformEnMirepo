@@ -1,12 +1,13 @@
-.nav{
+.nav {
     width: 100%;
     height: 100%;
   }
   
-  .container-padre{
-    width: 100%; /* Asegura que el contenedor sea de ancho completo */
-  /* Elimina el padding interno */
-  
+  .container-padre {
+    width: 100%;
+    /* Asegura que el contenedor sea de ancho completo */
+    /* Elimina el padding interno */
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -14,81 +15,69 @@
   
   
   }
-  .container-padre > .row > .col {
-      width: 100%;
+  
+  .container-padre>.row>.col {
+    width: 100%;
   }
   
-  .contInfo{
+  .contInfo {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 60%;
     border: 1px solid #ccc;
     background-color: #EDF2F7;
-    flex-direction:  column;
   }
-
   
-  
-  .perfil{
-    margin-bottom: 10px !important;
-    margin-left: 20px!important;
-  }
-
-  .info1,
-  .info2 {
-      float: left;
-      width: 55vh;
-      margin-left: 20px; /* Esto hace que cada columna ocupe el 50% del ancho del contenedor */
-      box-sizing: border-box; /* Esto asegura que el padding y el borde no afecten el ancho de las columnas */
-  }
   .col1 {
     display: flex;
     flex-wrap: wrap;
-    height:100%; 
-    width: 15%; 
-    background-color: #EDF2F7; /* Color de fondo del menú */
+    height: 100%;
+    width: 15%;
+    background-color: #EDF2F7;
+    /* Color de fondo del menú */
+  
   
   }
   
   
-  .col2{
+  .col2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
-    height: 100%; 
-    width: 100%;   
+    height: 100%;
+    width: 100%;
   
-    background-color: #f8f9fa; /* Color de fondo del menú */
+    background-color: #f8f9fa;
+    /* Color de fondo del menú */
   
   }
   
-  .container-fluid{
-    margin-top: 10px;
+  .container-fluid {
+    margin-top: 20px;
   }
   
-  .contenido{
+  .contenido {
     display: flex;
     flex-wrap: wrap;
-    padding: 0rem !important;
+    padding-top: 0px;
     /*width: 1191.005px;
     height:112px;*/
-    height: 100vh;
-    width: 100%;
+    height: 100%;
     border: 1px solid #ccc;
     flex-direction: row;
     justify-content: flex-start;
     background-color: #EDF2F7;
   }
   
-  .simple_container{
+  .simple_container {
     display: flex;
     width: 100%;
     height: 15%;
   }
   
-  .cont1{
+  .cont1 {
     display: flex;
     width: 100%;
     height: 50px;
@@ -97,33 +86,40 @@
     margin: 50px;
   }
   
-  .cont2{
+  .cont2 {
     display: flex;
     width: auto;
     border-radius: 10px;
-    margin-top:20px;
+    margin-top: 20px;
   }
   
-  .contTitulo{
+  .contTitulo {
     /*width: 1191.005px; 
-    height: 210px;*/ 
+    height: 210px;*/
     width: 100%;
-    height: 20%;
-    border: 1px solid #ccc; 
-    background-color: #52223b; 
-    display: flex; justify-content: center; 
+    height: 25%;
+    border: 1px solid #ccc;
+    background-color: #52223b;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
+  
   /* Estilos para los contenedores adicionales */
   .col-11 {
-    border: 1px solid #dee2e6; /* Borde para visualización */
-    margin-top: 20px; /* Espaciado superior */
-    padding: 20px; /* Espaciado interno */
+    border: 1px solid #dee2e6;
+    /* Borde para visualización */
+    margin-top: 20px;
+    /* Espaciado superior */
+    padding: 20px;
+    /* Espaciado interno */
   }
   
-  .col-3{
-    background-color: #EDF2F7; /* Color de fondo del menú */
-    border-right: 1px solid #dee2e6; /* Borde derecho */
+  .col-3 {
+    background-color: #EDF2F7;
+    /* Color de fondo del menú */
+    border-right: 1px solid #dee2e6;
+    /* Borde derecho */
   
   }
   
@@ -169,15 +165,15 @@
     border-radius: 50%;
   }
   
-  input:checked + .slider {
+  input:checked+.slider {
     background-color: #52223b;
   }
   
-  input:focus + .slider {
+  input:focus+.slider {
     box-shadow: 0 0 1px #52223b;
   }
   
-  input:checked + .slider:before {
+  input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -191,18 +187,21 @@
   .slider.round:before {
     border-radius: 50%;
   }
+  
   /* Estilos para los íconos de edición y eliminación */
   .edit-icon,
   .delete-icon {
-    text-decoration: none; /* Quita el subrayado del enlace */
-    margin-right: 10px; /* Espacio entre los íconos */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    margin-right: 10px;
+    /* Espacio entre los íconos */
   }
   
   .edit-icon:hover,
   .delete-icon:hover {
-    color: red; /* Cambia el color al pasar el cursor sobre los íconos */
+    color: red;
+    /* Cambia el color al pasar el cursor sobre los íconos */
   }
-  
   
   
   /* Estilos para la barra de navegación lateral */
@@ -211,20 +210,28 @@
     top: 0;
     height: 100vh;
     padding-top: 10px;
-    background-color: #FFFFFF; /* Fondo de la barra de navegación */
+    background-color: #FFFFFF;
+    /* Fondo de la barra de navegación */
   }
   
   
   
-  
+  /* Estilos para el contenido principal */
+  .main-content {
+    padding-left: 15px;
+    /* Esto deja espacio a la izquierda para que el contenido no se superponga con la barra lateral */
+  }
   
   /* Ajustes para dispositivos móviles */
   @media (max-width: 768px) {
+  
     /* Ajustes para dispositivos móviles */
     .sidebar-sticky {
-        position: relative;
-        height: auto; /* Ajusta la altura automáticamente en dispositivos móviles */
-        overflow-y: visible; /* Permite que el contenido de la barra lateral se desplace fuera de la pantalla si es necesario */
+      position: relative;
+      height: auto;
+      /* Ajusta la altura automáticamente en dispositivos móviles */
+      overflow-y: visible;
+      /* Permite que el contenido de la barra lateral se desplace fuera de la pantalla si es necesario */
     }
   }
   
@@ -233,7 +240,8 @@
     font-family: "DM Sans", sans-serif;
     font-weight: bold;
     color: #2E5559;
-    background-color: #F8F8F8; /* Cambia el fondo al pasar el mouse, si es necesario */
+    background-color: #F8F8F8;
+    /* Cambia el fondo al pasar el mouse, si es necesario */
   }
   
   .logo img {
@@ -249,9 +257,11 @@
   }
   
   .user-img {
-    width: 52px; /* Tamaño más pequeño para la imagen */
+    width: 52px;
+    /* Tamaño más pequeño para la imagen */
     height: 52px;
-    margin-right: 10px; /* Asegura un espacio entre la imagen y el texto */
+    margin-right: 10px;
+    /* Asegura un espacio entre la imagen y el texto */
   }
   
   .user-info h1 {
@@ -272,16 +282,20 @@
   }
   
   .dropdown img {
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    width: 30px; /* Ajusta el tamaño del botón de tres puntos si es necesario */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    width: 30px;
+    /* Ajusta el tamaño del botón de tres puntos si es necesario */
   }
   
   .dropdown-menu {
-    display: none; /* Oculta inicialmente el menú */
+    display: none;
+    /* Oculta inicialmente el menú */
   }
   
   .dropdown:hover .dropdown-menu {
-    display: block; /* Muestra el menú al pasar el cursor */
+    display: block;
+    /* Muestra el menú al pasar el cursor */
   }
   
   .nav-link {
@@ -295,26 +309,41 @@
   }
   
   .nav-link .icon {
-    width: 24px; /* O el tamaño que tengan tus iconos */
+    width: 24px;
+    /* O el tamaño que tengan tus iconos */
     height: 24px;
-    margin-right: 10px; /* Ajusta el margen según tus necesidades */
+    margin-right: 10px;
+    /* Ajusta el margen según tus necesidades */
   }
   
-  
-  .button-container{
+  .mesa-ayuda-hijo {
     display: flex;
-    justify-content: center;
-      align-items: center;
   }
-  
-  .btn-plan{
- 
-    background-color: #963e6c;
-    color: #ffffff; 
-    margin-left:30vh;
-    margin-top: 25px;
-  }
-  .botones{
-    margin-left:20vh;
-  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
 
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

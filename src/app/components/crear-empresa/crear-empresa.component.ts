@@ -17,6 +17,7 @@ export class CrearEmpresaComponent {
   direccion: string | undefined;
   fechaFinal: Date | undefined;
   correo: string | undefined;
+  entradaStatus: string | undefined;
 
   nuevaEmpresa: EmpresaDto | undefined;
 
@@ -30,6 +31,7 @@ export class CrearEmpresaComponent {
     let direccion = this.direccion;
     let fechaFinal = this.fechaFinal;
     let correo = this.correo;
+    let status = this.entradaStatus;
     if (
       nombre != undefined &&
       nombre != ' ' &&
@@ -40,7 +42,8 @@ export class CrearEmpresaComponent {
       direccion != ' ' &&
       fechaFinal != undefined &&
       correo != undefined &&
-      correo != ' '
+      correo != ' ' &&
+      status != undefined
     ) {
       let empresaNueva = new EmpresaDto(
         NIT,
@@ -49,7 +52,8 @@ export class CrearEmpresaComponent {
         maxNumWorker,
         direccion,
         fechaFinal,
-        correo
+        correo,
+        status
       );
       this.EmpresaService.guardarEmpresa(empresaNueva).subscribe((result) => {
         this.router.navigate(['/canela/suscripciones']);
