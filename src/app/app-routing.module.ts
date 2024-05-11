@@ -33,7 +33,10 @@ const routes: Routes = [
       { path: 'canela/planes', component: GestionPlanesComponent },
       { path: 'canela/usuarios', component: UsuariosComponent },
       { path: 'canela/perfil/view/:id', component: PerfilPersonalComponent },
-      { path: 'canela/perfil/edit/:id', component: PerfilEditarComponent },
+      {
+        path: 'canela/perfil/edit/:username',
+        component: PerfilEditarComponent,
+      },
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
       { path: 'canela/marketing', component: MarketingComponent },
       { path: 'canela/plan/edit/4', component: PlanEditarComponent },
