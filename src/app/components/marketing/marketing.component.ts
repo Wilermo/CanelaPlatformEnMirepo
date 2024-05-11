@@ -1,26 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PerfilDto } from 'src/app/model/perfil-dto';
-import { PerfilService } from 'src/app/service/perfil.service';
+import {MarketingService} from "../../service/marketing.service";
+import {MarketingDto} from "../../model/marketing-dto";
+import {Marketingstatus} from "../../model/marketingstatus";
 
 @Component({
   selector: 'app-marketing',
-
   templateUrl: './marketing.component.html',
   styleUrl: './marketing.component.css',
 })
 export class MarketingComponent implements OnInit {
+  empresas: MarketingDto[] | undefined;
+
+  existingStatuses: Marketingstatus[] | undefined;
+  nuevoStatus: string | undefined;
   constructor(
     private router: Router,
-    private MarketingService: PerfilService
+    private marketingService: MarketingService
   ) {}
 
-  usuarios: PerfilDto[] | undefined;
-  nuevoStatus: string | undefined;
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.marketingService.findAll().subscribe(empresas => this.empresas = empresas);
+    this.marketingService.findAllStatuses().subscribe(estados => this.existingStatuses = estados);
+  }
 
   onChange(value: string) {
     this.nuevoStatus = value;
+  }
+
+  nuevoEstado(){
+
+  }
+
+  guardarCambios(){
+    if(this.empresas != undefined){
+      this.marketingService.saveAll(this.empresas).subscribe(x => x);
+    }
   }
 }
