@@ -36,4 +36,11 @@ export class SuscripcionesComponent implements OnInit {
   nuevaEmpresa() {
     this.router.navigate(['/canela/empresa/add']);
   }
+
+  verSucripcion(suscripcion: any) {
+    this.router.navigate(['/canela/empresa/ver:id']);
+  }
+  facturas() {
+    this.router.navigate(['/canela/empresa/ver:id']);
+  }
 }

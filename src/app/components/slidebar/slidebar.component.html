@@ -31,9 +31,6 @@
                         <li class="sidebar-item">
                             <a [routerLink]="['/canela/permisos']" class="sidebar-link">Gestión de usuarios</a>
                         </li>
-                        <li class="sidebar-item">
-                            <a [routerLink]="['/canela/usuarios']" class="sidebar-link">Creación usuario</a>
-                        </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
@@ -44,15 +41,16 @@
                     </a>
                     <ul id="hire" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Logs</a>
+                            <a [routerLink]="['/canela/logs']" class="sidebar-link">Logs</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Mesa de ayuda</a>
+                            <a [routerLink]="['/canela/mesa-ayuda']" class="sidebar-link">Mesa de ayuda</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Impersonar</a>
+                            <a [routerLink]="['/canela/impersonar']" class="sidebar-link">Impersonar</a>
                         </li>
                     </ul>
+
 
                 </li>
                 <li class="sidebar-item">

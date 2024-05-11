@@ -3,7 +3,7 @@ export class PlanesDto {
     public name: string | undefined,
     public description: string | undefined,
     public duration: number | undefined,
-    public maxNumWorker: number | undefined,
+    public maxNumWorkers: number | undefined,
     public price: number | undefined
   ) {}
 }

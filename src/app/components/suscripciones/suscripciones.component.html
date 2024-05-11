@@ -47,6 +47,7 @@
                                             <th scope="col">Correo</th>
                                             <th scope="col">Num trabajadores</th>
                                             <th scope="col">Dirección</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Fecha final suscripción</th>
                                             <th scope="col">Acciones</th> 
                                         </tr>
@@ -55,12 +56,14 @@
                                         <tr *ngFor="let suscripcion of suscripciones">
                                             <td>{{ suscripcion.nameCompany}}</td>
                                             <td>{{ suscripcion.nit}}</td>
-                                            <td>{{ suscripcion.phonecompany}}</td>
+                                            <td>{{ suscripcion.phoneCompany}}</td>
                                             <td>{{ suscripcion.email}}</td>
-                                            <td>{{ suscripcion.maxNumWorker}}</td>
+                                            <td>{{ suscripcion.numWorkers}}</td>
                                             <td>{{ suscripcion.address}}</td>
+                                            <td>{{ suscripcion.status}}</td>
                                             <td>{{ suscripcion.subscriptionEndDate}}</td>
                                             <td>
+                                                <button (click)="verSucripcion(suscripcion)">Ver</button>
                                                 <button (click)="editarSuscripcion(suscripcion)">Editar</button>
                                                 <button (click)="eliminarSuscripcion(suscripcion)">Eliminar</button>
                                             </td>
@@ -70,6 +73,7 @@
                             </div>
                             <div class="button-container">
                                 <button class="btn btn-plan" type="button" (click)="nuevaEmpresa()">Nueva empresa</button>
+                                <button class="btn btn-plan" type="button" (click)="facturas()">Facturas</button>
                             </div>
                         </div>
 

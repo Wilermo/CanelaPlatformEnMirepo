@@ -1,5 +1,6 @@
 export class PerfilDto {
   constructor(
+    public id: number,
     public identificacion: number,
     public name: string,
     public username: string,
