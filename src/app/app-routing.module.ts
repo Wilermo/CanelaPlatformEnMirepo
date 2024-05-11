@@ -21,7 +21,8 @@ import { ImpersonarComponent } from './components/impersonar/impersonar.componen
 import { VerEmpresaComponent } from './components/ver-empresa/ver-empresa.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'forgot', component: ForgotPasswordComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
 
