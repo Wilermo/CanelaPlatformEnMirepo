@@ -50,11 +50,12 @@ export class LoginComponent {
       console.log('Entra1...');
       this.authService.login(this.username, this.password).subscribe(
         (data: any) => {
-          console.log("Respuesta del servidor:", data); 
+          console.log('Respuesta del servidor:', data);
           const rol = localStorage.getItem('role');
           if (rol === 'ADMIN_CANELA, default-roles-talentsoft') {
             this.router.navigate(['/canela/usuarios']);
-          }  else if (rol !== 'ADMIN_CANELA, default-roles-talentsoft') {
+          } else if (rol !== 'ADMIN_CANELA, default-roles-talentsoft') {
+            localStorage.setItem('username', this.username);
             this.router.navigate(['/canela/planes']);
           }
         },

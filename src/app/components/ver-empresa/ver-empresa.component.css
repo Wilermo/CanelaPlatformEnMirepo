@@ -1,4 +1,7 @@
-.nav{
+
+  
+  
+  .nav{
     width: 100%;
     height: 100%;
   }
@@ -6,7 +9,7 @@
   .container-padre{
     width: 100%; /* Asegura que el contenedor sea de ancho completo */
   /* Elimina el padding interno */
-  
+    margin: auto; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -21,26 +24,12 @@
   .contInfo{
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 60%;
     border: 1px solid #ccc;
     background-color: #EDF2F7;
     flex-direction:  column;
   }
-
   
-  
-  .perfil{
-    margin-bottom: 10px !important;
-    margin-left: 20px!important;
-  }
-
-  .info1,
-  .info2 {
-      float: left;
-      width: 55vh;
-      margin-left: 20px; /* Esto hace que cada columna ocupe el 50% del ancho del contenedor */
-      box-sizing: border-box; /* Esto asegura que el padding y el borde no afecten el ancho de las columnas */
-  }
   .col1 {
     display: flex;
     flex-wrap: wrap;
@@ -71,13 +60,12 @@
   .contenido{
     display: flex;
     flex-wrap: wrap;
-    padding: 0rem !important;
+    padding-top: 0px;
     /*width: 1191.005px;
     height:112px;*/
-    height: 100vh;
-    width: 100%;
+    height: 100%;
     border: 1px solid #ccc;
-    flex-direction: row;
+      flex-direction: row;
     justify-content: flex-start;
     background-color: #EDF2F7;
   }
@@ -108,7 +96,7 @@
     /*width: 1191.005px; 
     height: 210px;*/ 
     width: 100%;
-    height: 20%;
+    height: 25%;
     border: 1px solid #ccc; 
     background-color: #52223b; 
     display: flex; justify-content: center; 
@@ -216,7 +204,10 @@
   
   
   
-  
+  /* Estilos para el contenido principal */
+  .main-content {
+    padding-left: 15px; /* Esto deja espacio a la izquierda para que el contenido no se superponga con la barra lateral */
+  }
   
   /* Ajustes para dispositivos móviles */
   @media (max-width: 768px) {
@@ -308,13 +299,7 @@
   }
   
   .btn-plan{
- 
-    background-color: #963e6c;
-    color: #ffffff; 
-    margin-left:30vh;
-    margin-top: 25px;
+      background-color: #963e6c;
+      color: #ffffff; 
+      width: 10%;
   }
-  .botones{
-    margin-left:20vh;
-  }
-

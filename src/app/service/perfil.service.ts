@@ -17,6 +17,10 @@ export class PerfilService {
 
   constructor(private http: HttpClient) {}
 
+  findByUsername(username: string) {
+    return this.http.get<PerfilDto>(`http://localhost:8080/users/{username}`);
+  }
+
   findById(id: number) {
     return this.http.get<PerfilDto>(`http://localhost:8080/users/{id}`);
   }

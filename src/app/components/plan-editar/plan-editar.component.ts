@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { PlanesDto } from 'src/app/model/planes-dto';
-import { InfoPlanesService } from 'src/app/service/info-planes.service';
+import { InfoPlanesService } from 'src/app/service/plan-editar.service';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { PlanEditar } from 'src/app/model/plan-editar';
 
 @Component({
   selector: 'app-plan-editar',
@@ -18,7 +19,8 @@ export class PlanEditarComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  plan: PlanesDto | undefined;
+  plan: PlanEditar | undefined;
+  entradaId: number | undefined;
   entradaNombre: string | undefined;
   entradaDescripcion: string | undefined;
   entradaDuracion: number | undefined;
@@ -30,10 +32,11 @@ export class PlanEditarComponent implements OnInit {
       .pipe(
         switchMap((params) => this.PlanService.findById(+params.get('id')!))
       )
-      .subscribe((PlanesDto) => (this.plan = PlanesDto));
+      .subscribe((PlanEditar) => (this.plan = PlanEditar));
     console.log(this.plan);
   }
   editar() {
+    let inputId = this.entradaId;
     let inputNombre = this.entradaNombre;
     let inputDescrip = this.entradaDescripcion;
     let inputDurac = this.entradaDuracion;
@@ -41,6 +44,7 @@ export class PlanEditarComponent implements OnInit {
     let inputPrecio = this.entradaPrecio;
 
     if (
+      inputId != undefined &&
       inputNombre != undefined &&
       inputDescrip != undefined &&
       inputDescrip != '' &&
@@ -49,9 +53,10 @@ export class PlanEditarComponent implements OnInit {
       inputPrecio != undefined
     ) {
       if (this.plan != undefined) {
+        this.plan.id = inputId;
         this.plan.name = inputNombre;
         this.plan.description = inputDescrip;
-        this.plan.maxNumWorker = inputTrabaj;
+        this.plan.maxNumWorkers = inputTrabaj;
         this.plan.duration = inputDurac;
         this.plan.price = inputPrecio;
         console.log(this.plan);

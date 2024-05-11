@@ -32,48 +32,40 @@
 
                         <div class="contTitulo" >
                             <div class="container-fluid m-3" style="width: 1000px; height: 145px; border: 1px solid #ccc;background-color: #f3f0f2; border-radius: 18px;display: flex; align-items: center; ">
-                                <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Gestión suscripciones</h1>
+                                <h1 style="color: #963e6c; font-size: 4em; margin: 0 0 0 20px;">Ver facturas empresa</h1>
                             </div>
                         </div>
           
                         <div class="contInfo" >
                             <div class="container-fluid ">
+                                <div class="mb-3">
+                                    <p><b class="subtitulo">Nombre actual: </b> {{empresa?.nameCompany}}</p>
+                                </div>
+                                <div class="mb-3">
+                                    <p><b class="subtitulo">NIT actual: </b> {{empresa?.nit}}</p>
+                                </div>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">Nombre</th>
-                                            <th scope="col">NIT</th>
-                                            <th scope="col">Telefono</th>
-                                            <th scope="col">Correo</th>
-                                            <th scope="col">Num trabajadores</th>
-                                            <th scope="col">Dirección</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Fecha final suscripción</th>
-                                            <th scope="col">Acciones</th> 
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">status</th>
+                                            <th scope="col">Fecha facturación</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let suscripcion of suscripciones">
-                                            <td>{{ suscripcion.nameCompany}}</td>
-                                            <td>{{ suscripcion.nit}}</td>
-                                            <td>{{ suscripcion.phoneCompany}}</td>
-                                            <td>{{ suscripcion.email}}</td>
-                                            <td>{{ suscripcion.numWorkers}}</td>
-                                            <td>{{ suscripcion.address}}</td>
-                                            <td>{{ suscripcion.status}}</td>
-                                            <td>{{ suscripcion.subscriptionEndDate}}</td>
-                                            <td>
-                                                <button (click)="verSucripcion(suscripcion)">Ver</button>
-                                                <button (click)="editarSuscripcion(suscripcion)">Editar</button>
-                                                <button (click)="eliminarSuscripcion(suscripcion)">Eliminar</button>
-                                            </td>
+                                        <tr *ngFor="let factura of facturas">
+                                            <td>{{ factura.name}}</td>
+                                            <td>{{ factura.price}}</td>
+                                            <td>{{ factura.status}}</td>
+                                            <td>{{ factura.facturationdate}}</td>
+
                                         </tr>                                    
                                     </tbody>
                                 </table>
                             </div>
                             <div class="button-container">
-                                <button class="btn btn-plan" type="button" (click)="nuevaEmpresa()">Nueva empresa</button>
-                                <button class="btn btn-plan" type="button" (click)="facturas()">Facturas</button>
+                                <button class="btn btn-plan" type="button" (click)="volver()">Volver</button>
                             </div>
                         </div>
 
@@ -84,3 +76,4 @@
 
 </body>
 </html>
+

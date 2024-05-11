@@ -288,6 +288,14 @@
 
   .btn-plan{
     background-color: #963e6c;
-    color: #ffffff; 
+    color: #ffffff;
+    margin-left:30vh;
+    margin-top: 25px; 
   }
   
+  .btn-plan2{
+    background-color: #963e6c;
+    color: #ffffff;
+
+    margin-top: 25px; 
+  }
