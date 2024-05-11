@@ -22,4 +22,13 @@ export class MarketingService {
   saveAll(empresas: MarketingDto[]) {
     return this.http.post<MarketingDto[]>("http://localhost:8762/possibleclient/saveAll", empresas);
   }
+
+  saveStatus(estado: Marketingstatus) {
+    return this.http.post<Marketingstatus>("http://localhost:8762/marketingstatus/save", estado);
+  }
+
+  delete(id: number) {
+    return this.http.delete(`http://localhost:8762/marketingstatus/delete/${id}`);
+
+  }
 }
