@@ -20,4 +20,12 @@ export class PermisosUsuarioService {
       'http://localhost:8080/canelaUser/getUsers'
     );
   }
+
+  modificarPermisos(perfil: UsuarioPermisoDto): Observable<UsuarioPermisoDto> {
+    return this.http.put<UsuarioPermisoDto>(
+      `http://localhost:8080/canelaUser/edit`,
+      perfil,
+      this.httpOptions
+    );
+  }
 }
