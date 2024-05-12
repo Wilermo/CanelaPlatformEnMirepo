@@ -8,7 +8,7 @@ import { Plan } from '../shared/model/Entities/plan';
   providedIn: 'root'
 })
 export class PlanesCanelaService {
-  private apiUrl = `${environment.localURL}/plans`
+  private apiUrl = `${environment.URL}/plans`
   constructor(private http: HttpClient) { }
 
   obtenerPlanes(): Observable<Plan[]> {
