@@ -20,6 +20,9 @@ import { PlanEditarComponent } from './components/plan-editar/plan-editar.compon
 import { CrearEmpresaComponent } from './components/crear-empresa/crear-empresa.component';
 import { EditarEmpresaComponent } from './components/editar-empresa/editar-empresa.component';
 import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.component';
+import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
+import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
+import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.
     CrearEmpresaComponent,
     EditarEmpresaComponent,
     PerfilEditarComponent,
+    PlanesCanelaComponent,
+    EditarPlanComponent,
+    CrearPlanComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
