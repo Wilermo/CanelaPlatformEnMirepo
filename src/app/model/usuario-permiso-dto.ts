@@ -3,6 +3,7 @@ export class UsuarioPermisoDto {
     public firstname: string,
     public surname: string,
     public username: string,
-    public id: number
+    public id: number,
+    public roles: string[]
   ) {}
 }

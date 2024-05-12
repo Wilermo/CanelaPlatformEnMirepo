@@ -33,7 +33,7 @@ export class SlidebarComponent implements OnInit {
   }
 
   pantallaPlanes() {
-    this.router.navigate(['/canela/planes']);
+    this.router.navigate(['/planes-canela']);
   }
 
   pantallaPermisos() {

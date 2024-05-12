@@ -40,9 +40,10 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Empleados</th>
+                                            <th scope="col">Usuario</th>
                                             <th scope="col">Marketing</th>
-                                            <th scope="col">Gerente finanzas</th>
-                                            <th scope="col">Soporte tecnico</th>
+                                            <th scope="col">Cuentas</th>
+                                            <th scope="col">Soporte</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -51,22 +52,23 @@
                                             <td>{{user.username}} </td>
                                             <td>
                                                 <!-- Interruptor personalizado -->
-                                                <label class="switch" (click)="enableMarketing(user.id)">
-                                                    <input type="checkbox">
+                                                <label class="switch" >
+                                                    <input type="checkbox" [checked]="user.roles.includes('SOPORTE')" (change)="handleCheckboxChange($event,user.username,'MARKETING')">
+
                                                     <span class="slider round"></span>
                                                 </label>
                                             </td>
                                             <td>
                                                 <!-- Interruptor personalizado -->
-                                                <label class="switch" (click)="enableFinanzas(user.id)">
-                                                    <input type="checkbox">
+                                                <label class="switch" >
+                                                    <input type="checkbox" [checked]="user.roles.includes('CUENTAS')" (change)="handleCheckboxChange($event,user.username,'CUENTAS')">
                                                     <span class="slider round"></span>
                                                 </label>
                                             </td>""
                                             <td>
                                                 <!-- Interruptor personalizado -->
-                                                <label class="switch" (click)="enableServer(user.id)">
-                                                    <input type="checkbox">
+                                                <label class="switch" >
+                                                    <input type="checkbox" [checked]="user.roles.includes('SOPORTE')" (change)="handleCheckboxChange($event,user.username,'SOPORTE')" >
                                                     <span class="slider round"></span>
                                                 </label>
                                             </td>
