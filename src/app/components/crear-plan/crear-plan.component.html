@@ -25,6 +25,10 @@
             <label for="precio">Trabajadores:</label>
             <input type="number" class="form-control" id="trabajadores" name="trabajadores" [(ngModel)]="plan.maxnumworkers" required>
         </div>
+        <div class="form-group">
+            <label for="precio">Estado:</label>
+            <input class="form-control" id="status" name="status" [(ngModel)]="plan.status" required>
+        </div>
         <div class="form-group mt-3">
             <button class="btn btn-primary" (click)="agregarPlan()">Crear Plan</button>
             <button class="btn btn-primary" (click)="volverAtras()">Volver</button>

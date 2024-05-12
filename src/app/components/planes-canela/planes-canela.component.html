@@ -40,6 +40,7 @@
                                             <th scope="col">Descripción</th>
                                             <th scope="col">Duración</th>
                                             <th scope="col">Precio</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
@@ -49,6 +50,7 @@
                                             <td>{{ plan.description}}</td>
                                             <td>{{ plan.duration}}</td>
                                             <td>{{ plan.price}}</td>
+                                            <td>{{ plan.status}}</td>
                                             <td>
                                                 <button (click)="editarPlan(plan.id)">Editar</button>
                                                 <button (click)="eliminarPlan(plan.id)">Eliminar</button>

@@ -56,7 +56,7 @@ export class LoginComponent {
             this.router.navigate(['/canela/usuarios']);
           } else if (rol !== 'ADMIN_CANELA, default-roles-talentsoft') {
             localStorage.setItem('username', this.username);
-            this.router.navigate(['/canela/planes-canela']);
+            this.router.navigate(['/planes-canela']);
           }
         },
         (error: any) => {

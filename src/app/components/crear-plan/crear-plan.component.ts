@@ -9,7 +9,7 @@ import { Plan } from 'src/app/shared/model/Entities/plan';
   styleUrl: './crear-plan.component.css'
 })
 export class CrearPlanComponent implements OnInit{
-  plan: Plan = new Plan(0, '','',0,0,'','');
+  plan: Plan = new Plan(0, '','',0,0,'','Active');
 
   constructor(private route: ActivatedRoute, private router: Router, private planeslanelaService: PlanesCanelaService) {}
 
