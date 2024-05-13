@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {MarketingService} from "../../service/marketing.service";
 import {MarketingDto} from "../../model/marketing-dto";
 import {Marketingstatus} from "../../model/marketingstatus";
+import Swal from "sweetalert2";
 
 
 @Component({
@@ -21,6 +22,13 @@ export class MarketingComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Gestión de empresas',
+      text: "No olvide guardar los cambios al finalizar",
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: '#963e6c',
+    });
     this.marketingService.findAll().subscribe(empresas => this.empresas = empresas);
     this.marketingService.findAllStatuses().subscribe(estados => this.existingStatuses = estados);
   }

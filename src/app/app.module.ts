@@ -23,6 +23,9 @@ import { CrearEmpresaComponent } from './components/crear-empresa/crear-empresa.
 import { EditarEmpresaComponent } from './components/editar-empresa/editar-empresa.component';
 import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.component';
 import { EstadoMarketingComponent } from './components/estado-marketing/estado-marketing.component';
+import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
+import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
+import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { EstadoMarketingComponent } from './components/estado-marketing/estado-m
     EditarEmpresaComponent,
     PerfilEditarComponent,
     EstadoMarketingComponent,
+    PlanesCanelaComponent,
+    EditarPlanComponent,
+    CrearPlanComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,     CommonModule],
   providers: [],
