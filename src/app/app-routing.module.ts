@@ -19,7 +19,11 @@ import { LogsComponent } from './components/logs/logs.component';
 import { MesaAyudaComponent } from './components/mesa-ayuda/mesa-ayuda.component';
 import { ImpersonarComponent } from './components/impersonar/impersonar.component';
 import { VerEmpresaComponent } from './components/ver-empresa/ver-empresa.component';
+import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
+import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
+import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
 import {EstadoMarketingComponent} from "./components/estado-marketing/estado-marketing.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -35,7 +39,16 @@ const routes: Routes = [
       { path: 'canela/planes', component: GestionPlanesComponent },
       { path: 'canela/usuarios', component: UsuariosComponent },
       { path: 'canela/perfil/view/:id', component: PerfilPersonalComponent },
-      { path: 'canela/perfil/edit/:id', component: PerfilEditarComponent },
+      {
+        path: 'canela/perfil/edit/:username',
+        component: PerfilEditarComponent,
+      },
+
+      { path: 'planes-canela', component: PlanesCanelaComponent },
+      { path: 'editar-plan/:id', component: EditarPlanComponent },
+      { path: 'editar-plan', component: EditarPlanComponent },
+      { path: 'crear-plan', component: CrearPlanComponent },
+
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
       { path: 'canela/marketing', component: MarketingComponent },
       { path: 'canela/marketing/status', component: EstadoMarketingComponent },
