@@ -38,11 +38,13 @@ const routes: Routes = [
       { path: 'canela/usuarios', component: UsuariosComponent },
       { path: 'canela/perfil/view/:id', component: PerfilPersonalComponent },
       {
-        path: 'canela/perfil/edit/:username',component: PerfilEditarComponent,
+        path: 'canela/perfil/edit/:username',
+        component: PerfilEditarComponent,
       },
 
       { path: 'planes-canela', component: PlanesCanelaComponent },
       { path: 'editar-plan/:id', component: EditarPlanComponent },
+      { path: 'editar-plan', component: EditarPlanComponent },
       { path: 'crear-plan', component: CrearPlanComponent },
 
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
