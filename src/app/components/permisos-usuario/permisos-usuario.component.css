@@ -9,7 +9,7 @@
 .container-padre{
   width: 100%; /* Asegura que el contenedor sea de ancho completo */
 /* Elimina el padding interno */
-  margin: auto; 
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -32,8 +32,8 @@
 .col1 {
   display: flex;
   flex-wrap: wrap;
-  height:100%; 
-  width: 15%; 
+  height:100%;
+  width: 15%;
   background-color: #EDF2F7; /* Color de fondo del menú */
 
 
@@ -44,10 +44,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  height: 100%; 
-  width: 100%;   
+  height: 100%;
+  width: 100%;
 
   background-color: #f8f9fa; /* Color de fondo del menú */
 
@@ -93,14 +93,14 @@
 }
 
 .contTitulo{
-  /*width: 1191.005px; 
-  height: 210px;*/ 
+  /*width: 1191.005px;
+  height: 210px;*/
   width: 100%;
   height: 25%;
-  border: 1px solid #ccc; 
-  background-color: #52223b; 
-  display: flex; 
-  justify-content: center; 
+  border: 1px solid #ccc;
+  background-color: #52223b;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 /* Estilos para los contenedores adicionales */
@@ -293,15 +293,16 @@ input:checked + .slider:before {
 
 .button-container{
   display: flex;
-  justify-content: center;
-    align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 0.1%;
+  margin-bottom: 0.1%;
+  width: 100%;
 }
 
 .btn-plan{
-    background-color: #963e6c;
-    color: #ffffff; 
-    width: 100%;
-    margin-left:75vh;
-    margin-top: 25px;
+  background-color: #963e6c;
+  width: 20%  ;
+  color: #ffffff;
 }
 
