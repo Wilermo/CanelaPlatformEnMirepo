@@ -22,6 +22,8 @@ import { VerEmpresaComponent } from './components/ver-empresa/ver-empresa.compon
 import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
 import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
 import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
+import {EstadoMarketingComponent} from "./components/estado-marketing/estado-marketing.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -49,6 +51,7 @@ const routes: Routes = [
 
       { path: 'canela/suscripciones', component: SuscripcionesComponent },
       { path: 'canela/marketing', component: MarketingComponent },
+      { path: 'canela/marketing/status', component: EstadoMarketingComponent },
       { path: 'canela/plan/edit/4', component: PlanEditarComponent },
       { path: 'canela/plan/add', component: PlanCrearComponent },
       { path: 'canela/empresa/add', component: CrearEmpresaComponent },
