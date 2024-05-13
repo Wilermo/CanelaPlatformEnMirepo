@@ -23,7 +23,7 @@ export class PermisosUsuarioComponent implements OnInit {
   roles: string[] | undefined;
   rolesPorUsuario: { [key: string]: string[] } = {};
 
-  username: string | undefined;
+  username: string | null = null;
   ngOnInit(): void {
     Swal.fire({
       icon: 'warning',
@@ -33,7 +33,7 @@ export class PermisosUsuarioComponent implements OnInit {
       confirmButtonColor: '#963e6c',
     });
 
-  username = localStorage.getItem('username');
+  this.username = localStorage.getItem('username');
 
     this.permisosUsuarioService.findAllUsers().subscribe((users) => {
       this.usuarios = users;
