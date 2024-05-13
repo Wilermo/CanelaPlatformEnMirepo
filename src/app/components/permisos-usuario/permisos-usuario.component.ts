@@ -4,7 +4,9 @@ import { UsuarioPermisoDto } from 'src/app/model/usuario-permiso-dto';
 import { PermisosUsuarioService } from 'src/app/service/permisos-usuario.service';
 import { User } from 'src/app/shared/model/auth/user';
 import { UserService } from '../../shared/model/user.service';
+
 import Swal from "sweetalert2";
+
 
 @Component({
   selector: 'app-permisos-usuario',
@@ -30,6 +32,9 @@ export class PermisosUsuarioComponent implements OnInit {
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#963e6c',
     });
+
+  username = localStorage.getItem('username');
+
     this.permisosUsuarioService.findAllUsers().subscribe((users) => {
       this.usuarios = users;
       this.usuarios.forEach((user) => {
@@ -109,6 +114,7 @@ export class PermisosUsuarioComponent implements OnInit {
 
 
   }
+
   /*
   enviarDatosRoles(): void {
     const token = localStorage.getItem('token');

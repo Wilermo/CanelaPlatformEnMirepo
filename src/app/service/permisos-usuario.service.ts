@@ -22,7 +22,9 @@ export class PermisosUsuarioService {
     );
   }
 
+
   saveAllUsers(usuarios: UsuarioPermisoDto[]) {
     return this.http.post<UsuarioPermisoDto[]>("http://localhost:8762/rol/update_all_users_roles", usuarios);
+
   }
 }
