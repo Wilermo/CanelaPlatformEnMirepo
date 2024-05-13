@@ -6,17 +6,18 @@ import { Plan } from 'src/app/shared/model/Entities/plan';
 @Component({
   selector: 'app-planes-canela',
   templateUrl: './planes-canela.component.html',
-  styleUrl: './planes-canela.component.css'
+  styleUrl: './planes-canela.component.css',
 })
-export class PlanesCanelaComponent implements OnInit{
+export class PlanesCanelaComponent implements OnInit {
   planes: Plan[] = [];
 
   constructor(
     private planescanelasService: PlanesCanelaService,
-    private router: Router) {}
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.cargarPlanes()
+    this.cargarPlanes();
   }
 
   cargarPlanes() {
@@ -27,24 +28,23 @@ export class PlanesCanelaComponent implements OnInit{
       },
       error: (error) => {
         console.error('Error al cargar planes:', error);
-      }
-    })
+      },
+    });
   }
 
   eliminarPlan(id: number) {
-    if (confirm('¿Estás seguro de que deseas eliminar esta plan?')){
+    if (confirm('¿Estás seguro de que deseas eliminar esta plan?')) {
       this.planescanelasService.eliminarPlan(id).subscribe(() => {
         this.cargarPlanes();
-      })
+      });
     }
   }
 
   editarPlan(id: number) {
-    this.router.navigate([`editar-plan/${id}`])
+    this.router.navigate([`editar-plan/${id}`]);
   }
 
-  agregarPlan():void {
-    this.router.navigate([`crear-plan`])
+  agregarPlan(): void {
+    this.router.navigate([`crear-plan`]);
   }
-  
 }

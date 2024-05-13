@@ -307,13 +307,18 @@
       align-items: center;
   }
   
-  .btn-plan{
+  .btn-primary{
  
     background-color: #963e6c;
     color: #ffffff; 
     margin-left:42vh;
     margin-top: 25px;
   }
+
+  .btn-primary:active {
+    background-color: #963e6c; /* Mantienes el color de fondo al presionar */
+    color: #ffffff; /* Mantienes el color del texto al presionar */
+}
   .botones{
     margin-left:20vh;
   }
