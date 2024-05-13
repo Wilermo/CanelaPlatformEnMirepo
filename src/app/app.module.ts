@@ -26,6 +26,7 @@ import { EstadoMarketingComponent } from './components/estado-marketing/estado-m
 import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
 import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
 import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
+import { EstadoMarketingComponent } from './components/estado-marketing/estado-marketing.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CrearPlanComponent } from './components/crear-plan/crear-plan.component
     PlanesCanelaComponent,
     EditarPlanComponent,
     CrearPlanComponent,
+    EstadoMarketingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,     CommonModule],
   providers: [],

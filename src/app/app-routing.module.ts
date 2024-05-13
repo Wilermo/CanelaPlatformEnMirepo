@@ -23,6 +23,8 @@ import {EstadoMarketingComponent} from "./components/estado-marketing/estado-mar
 import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
 import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
 import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
+import {EstadoMarketingComponent} from "./components/estado-marketing/estado-marketing.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },

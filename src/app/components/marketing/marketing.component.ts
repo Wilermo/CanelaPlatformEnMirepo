@@ -61,7 +61,6 @@ export class MarketingComponent implements OnInit {
     this.nuevoStatus = value;
   }
 
-
   nuevoEstado(){
     this.router.navigate(['canela/marketing/status']);
   }

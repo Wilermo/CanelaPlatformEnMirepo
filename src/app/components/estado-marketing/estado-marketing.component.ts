@@ -5,6 +5,7 @@ import {Marketingstatus} from "../../model/marketingstatus";
 import Swal from "sweetalert2";
 
 
+
 @Component({
   selector: 'app-estado-marketing',
   templateUrl: './estado-marketing.component.html',
@@ -71,6 +72,5 @@ export class EstadoMarketingComponent implements OnInit {
       }
     });
     this.marketingService.delete(id).subscribe(x => window.location.reload());
-
   }
 }
