@@ -5,6 +5,7 @@ import {MarketingDto} from "../../model/marketing-dto";
 import {Marketingstatus} from "../../model/marketingstatus";
 import Swal from "sweetalert2";
 
+
 @Component({
   selector: 'app-marketing',
   templateUrl: './marketing.component.html',
@@ -37,7 +38,7 @@ export class MarketingComponent implements OnInit {
   }
 
   nuevoEstado(){
-
+    this.router.navigate(['canela/marketing/status']);
   }
 
   guardarCambios(){
