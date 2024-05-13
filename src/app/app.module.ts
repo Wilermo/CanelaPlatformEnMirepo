@@ -22,6 +22,7 @@ import { PlanEditarComponent } from './components/plan-editar/plan-editar.compon
 import { CrearEmpresaComponent } from './components/crear-empresa/crear-empresa.component';
 import { EditarEmpresaComponent } from './components/editar-empresa/editar-empresa.component';
 import { PerfilEditarComponent } from './components/perfil-editar/perfil-editar.component';
+import { EstadoMarketingComponent } from './components/estado-marketing/estado-marketing.component';
 import { PlanesCanelaComponent } from './components/planes-canela/planes-canela.component';
 import { EditarPlanComponent } from './components/editar-plan/editar-plan.component';
 import { CrearPlanComponent } from './components/crear-plan/crear-plan.component';
@@ -45,6 +46,7 @@ import { EstadoMarketingComponent } from './components/estado-marketing/estado-m
     CrearEmpresaComponent,
     EditarEmpresaComponent,
     PerfilEditarComponent,
+    EstadoMarketingComponent,
     PlanesCanelaComponent,
     EditarPlanComponent,
     CrearPlanComponent,

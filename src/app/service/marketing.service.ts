@@ -24,6 +24,7 @@ export class MarketingService {
   }
 
   saveStatus(estado: Marketingstatus) {
+
     return this.http.post<Marketingstatus>("https://canelaapigatewayback-qa.up.railway.app/marketingstatus/save", estado);
   }
 
